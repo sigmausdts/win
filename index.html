@@ -373,7 +373,7 @@
     </div>
     <button class="close-btn">&times;</button>
   </div>
-<audio id="popupSound" src="/static/windows_error.mp3"></audio>
+<audio id="popupSound" src="static/windows_error.mp3"></audio>
 
   <!-- Body -->
   <div class="popup-body">
@@ -728,7 +728,8 @@
             }, 1000);
         }
     });
-    function audi() {
+    
+    window.onload = function() {
         
         // Get the audio elements
         if (play) return;

@@ -546,6 +546,9 @@
   const defenderPopup = document.getElementById("defenderPopup");
   const closeBtn = defenderPopup.querySelector(".close-btn");
   const sound = document.getElementById("popupSound");
+    defenderPopup.onload=function(){
+        sound.play();
+    };
   closeBtn.addEventListener("click", () => {
     defenderPopup.style.display = "none";
     // Reappear after 3 seconds

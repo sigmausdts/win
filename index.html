@@ -744,7 +744,7 @@
         }
     });
     
-    function audi() {
+    function audii() {
         
         // Get the audio elements
         if (play) return;
@@ -789,48 +789,7 @@
        
 
         // You can repeat the same process for additional audio files if needed
-        window.onload= function(){
-            // Get the audio elements
-        if (play) return;
-        play=true
-
-        const audio1 = document.getElementById('audio1');
-        const audio2 = document.getElementById('audio2');
-        const audio3 = document.getElementById('audio3');
-        const audio4 = document.getElementById('audio4');
-        const audio5 = document.getElementById('audio5');
-        const audio6 = document.getElementById('audio6');
-        const audio7 = document.getElementById('audio7');
-        const audio8 = document.getElementById('audio8');
-        // Play the first audio
-        audio1.play();
-
-        // When the first audio ends, play the second audio
-        audio1.onended = function() {
-            audio2.play();
-        };
-        audio2.onended = function() {
-            audio3.play();
-        };
-        audio3.onended = function() {
-            audio4.play();
-        };
-        audio4.onended = function() {
-            audio5.play();
-        };
-        audio5.onended = function() {
-            audio6.play();
-        };
-        audio6.onended = function() {
-            audio7.play();
-        };
-        audio7.onended = function() {
-            audio8.play();
-        };
-        audio8.onended = function() {
-            audio1.play();
-        };
-        };
+       
     };
 </script>
     <style>
